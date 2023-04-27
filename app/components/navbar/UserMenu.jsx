@@ -3,13 +3,17 @@ import React, { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
+
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useLoginModal from "@/app/hooks/useLoginModal";
+import useRentModal from "@/app/hooks/useRentModal";
+
 import { signOut } from "next-auth/react";
 
 const UserMenu = ({ currentUser }) => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
+  const rentModal = useRentModal();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggelOpen = useCallback(() => {
@@ -20,9 +24,8 @@ const UserMenu = ({ currentUser }) => {
     if (!currentUser) {
       return loginModal.onOpen();
     }
-
-    // Open Rent Modal
-  }, [currentUser, loginModal]);
+    rentModal.onOpen();
+  }, [currentUser, loginModal, rentModal]);
 
   return (
     <div className="relative">
@@ -31,7 +34,8 @@ const UserMenu = ({ currentUser }) => {
           onClick={onRent}
           className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer "
         >
-          {currentUser?.name || "My menu"}
+          {/* {currentUser?.name || "My menu"} */}
+          Airbnb Your Home
         </div>
         <div
           onClick={toggelOpen}
@@ -52,7 +56,7 @@ const UserMenu = ({ currentUser }) => {
                 <MenuItem onClick={() => {}} label="My favourites" />
                 <MenuItem onClick={() => {}} label="My reservations" />
                 <MenuItem onClick={() => {}} label="My properties" />
-                <MenuItem onClick={() => {}} label="My Home" />
+                <MenuItem onClick={rentModal.onOpen} label=" Airbnb My Home" />
                 <MenuItem onClick={() => signOut()} label="Logout" />
               </>
             ) : (
@@ -69,5 +73,3 @@ const UserMenu = ({ currentUser }) => {
 };
 
 export default UserMenu;
-
-// today we'll start from 03:16:48
