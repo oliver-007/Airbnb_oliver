@@ -16,5 +16,3 @@ const CategoryInput = ({ label, icon: Icon, onClick, selected }) => {
 };
 
 export default CategoryInput;
-
-// today we'll start from 03:37:44
