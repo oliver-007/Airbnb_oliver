@@ -62,4 +62,3 @@ const ImageUpload = ({ onChange, value }) => {
 };
 
 export default ImageUpload;
-//  will start from 04:32:36
