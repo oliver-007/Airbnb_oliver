@@ -10,7 +10,7 @@ const formatedCountries = countries.map((country) => {
     region: region,
   };
 });
-console.log(formatedCountries);
+
 const useCountries = () => {
   const getAll = () => formatedCountries;
 
