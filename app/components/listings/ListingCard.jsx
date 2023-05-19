@@ -18,7 +18,6 @@ const ListingCard = ({
   actionId,
   currentUser,
 }) => {
-  console.log("data form listing card : ", data);
   const router = useRouter();
   const { getByValue } = useCountries();
 
