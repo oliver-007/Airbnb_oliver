@@ -92,4 +92,3 @@ const ListingCard = ({
 };
 
 export default ListingCard;
-// 5:23:12

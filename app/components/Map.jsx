@@ -37,5 +37,3 @@ const Map = ({ center }) => {
 };
 
 export default Map;
-
-// we'll start form 4:06:41
