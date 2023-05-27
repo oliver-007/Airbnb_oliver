@@ -59,4 +59,3 @@ const ListingInfo = ({
 };
 
 export default ListingInfo;
-// 6:16:57
