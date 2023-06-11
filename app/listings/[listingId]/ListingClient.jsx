@@ -60,9 +60,7 @@ const ListingClient = ({ listing, reservations = [], currentUser }) => {
       .then(() => {
         toast.success("Lisiting reserved !");
         setDateRange(initialDateRange);
-        router.refresh();
-
-        // router.push("/trips");
+        router.push("/trips");
       })
       .catch(() => {
         toast.error("Something went worng.");
@@ -134,5 +132,3 @@ const ListingClient = ({ listing, reservations = [], currentUser }) => {
 };
 
 export default ListingClient;
-
-// 6:28:01
