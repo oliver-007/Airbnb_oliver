@@ -38,5 +38,3 @@ export default async function getReservations(params) {
     throw new Error(error);
   }
 }
-
-// 06:55:07

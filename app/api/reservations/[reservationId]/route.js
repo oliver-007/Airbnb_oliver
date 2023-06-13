@@ -20,4 +20,3 @@ export async function DELETE(request, { params }) {
   });
   return NextResponse.json(reservation);
 }
-// 07:17:05
