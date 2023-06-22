@@ -20,4 +20,3 @@ const FavoritesClient = ({ listings, currentUser }) => {
 };
 
 export default FavoritesClient;
-// 07:42:37

@@ -40,7 +40,7 @@ const Modal = ({
 
   //    ----- handle-secondary-action
   const handleSecondaryAction = useCallback(() => {
-    if (disabled && !secondaryAction) return;
+    if (disabled || !secondaryAction) return;
     secondaryAction();
   }, [disabled, secondaryAction]);
 
