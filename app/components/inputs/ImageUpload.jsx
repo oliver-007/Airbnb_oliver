@@ -15,9 +15,10 @@ const ImageUpload = ({ onChange, value }) => {
   return (
     <CldUploadWidget
       onUpload={handleUpload}
-      uploadPreset="unsigned_testing"
+      uploadPreset="unsigned_preset_name"
       options={{
         maxFiles: 1,
+        folder: "pma",
       }}
     >
       {({ open }) => {
